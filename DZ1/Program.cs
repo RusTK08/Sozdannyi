@@ -5,6 +5,7 @@ Console.WriteLine("Введите натуральное первое число
 int num = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите натуральное второе число!");
 int num1 = Convert.ToInt32(Console.ReadLine());
+
 void Function(int num)
 {
     if(num1 > 0)
@@ -13,7 +14,7 @@ void Function(int num)
     {
         return ;
     }
-    if(num > 0) Console.Write($"{num}, ");
+    if(num > 0) Console.Write($"{num}"+ " ");
     num = num + 1;
     Function(num);
     }
