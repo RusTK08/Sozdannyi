@@ -3,13 +3,16 @@
 Console.WriteLine("Введите числа через ,");
 string  stroka = Console.ReadLine();
 string [] array = stroka.Split(",");
+
+int i = 0;
 void Vivod(string [] array)
 {
-    int i = 0;
-    if(i > array.Length)
-    return ;
+    
+    if(i == array.Length) 
+    {return ;}
+    Console.Write($"{array [i]}" + " ");
     i = i + 1;
-    Console.Write($"{array [i]} ");
     Vivod(array);
+    
 }
 Vivod(array);
