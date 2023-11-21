@@ -1,41 +1,23 @@
-﻿
-// Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
-
-// Указание
-// Использовать рекурсию. Не использовать цикл.
-
-
-// Пример
-
-// N=5 => 1 2 3 4 5
-int number = Convert.ToInt32(Console.ReadLine());
-
-void Function(int number)
+﻿//  Задайте значения M и N. Напишите программу, которая выведет все 
+//натуральные числа в промежутке от M до N. 
+//Использовать рекурсию, не использовать циклы.
+Console.WriteLine("Введите натуральное первое число!");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите натуральное второе число!");
+int num1 = Convert.ToInt32(Console.ReadLine());
+void Function(int num)
 {
-    if(1 == number)
-    {return ;}
-
-    number =  number - 1; 
-    Function(number);
-
-    Console.WriteLine(number);
-}
-
-Function(number);
-
-
-Console.WriteLine("Введите число");
-int numberA = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите возведение в степень");
-int numberB = Convert.ToInt32(Console.ReadLine());
-
-
-int Function(int numberA, int numberB)
-{
-    if(1 == numberB)
-    {return numberA;}
-    return numberA * Function(numberA, numberB - 1);
-}
-//  Function( numberA, numberB);
-Console.Write("Итог = ");
-Console.WriteLine(Function(numberA, numberB));
+    if(num1 > 0)
+    {
+        if(num > num1)
+    {
+        return ;
+    }
+    if(num > 0) Console.Write($"{num}, ");
+    num = num + 1;
+    Function(num);
+    }
+    else Console.WriteLine("Введите второе число больше ноля!");
+    
+} 
+Function(num);
